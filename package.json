@@ -1,0 +1,21 @@
+{
+  "name": "app-parcel",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel serve --host 0.0.0.0",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/optimizer-data-url": "2.7.0",
+    "@parcel/transformer-inline-string": "2.7.0",
+    "@parcel/transformer-sass": "^2.7.0",
+    "@plasmohq/parcel-transformer-svelte3": "^0.2.2",
+    "parcel": "latest"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "svelte": "^3.50.1"
+  }
+}
