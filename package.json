@@ -8,14 +8,16 @@
     "build": "parcel build"
   },
   "devDependencies": {
-    "@parcel/optimizer-data-url": "2.7.0",
-    "@parcel/transformer-inline-string": "2.7.0",
-    "@parcel/transformer-sass": "^2.7.0",
-    "@plasmohq/parcel-transformer-svelte3": "^0.2.2",
-    "parcel": "latest"
+    "@parcel/transformer-sass": "2.12.0",
+    "@plasmohq/parcel-transformer-svelte": "0.6",
+    "parcel": "2.12.0",
+    "parcel-transformer-svelte-4": "^1.2.5"
   },
-  "license": "MIT",
   "dependencies": {
-    "svelte": "^3.50.1"
-  }
+    "svelte": "4.2.15"
+  },
+  "@parcel/resolver-default": {
+    "packageExports": true
+  },
+  "license": "MIT"
 }

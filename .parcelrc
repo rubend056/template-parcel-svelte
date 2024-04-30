@@ -3,9 +3,7 @@
     "@parcel/config-default"
   ],
 	"transformers":{
-		"*.svelte":["@plasmohq/parcel-transformer-svelte3"], 
+		"*.svelte":["@plasmohq/parcel-transformer-svelte"], 
 		"raw:*":["@parcel/transformer-raw"]
 	}
-	
-
 }
