@@ -1,19 +1,32 @@
 {
-  "name": "app-parcel",
+  "name": "template-parcel-svelte",
   "version": "1.0.0",
+  "description": "A parcel 2 + svelte 4 starter: one app, water.css, a router, and a lint that keeps the imports honest",
+  "type": "module",
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel serve --host 0.0.0.0",
-    "build": "parcel build"
+    "start": "parcel serve --host 0.0.0.0 --port 41900",
+    "watch": "parcel watch",
+    "build": "parcel build --no-source-maps",
+    "test": "node --test \"src/**/*.test.js\" lint_islands.test.js"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.16.4",
-    "@plasmohq/parcel-transformer-svelte": "0.6.1",
-    "parcel": "2.16.4"
+    "@parcel/transformer-sass": "^2.16.4",
+    "autoprefixer": "^10.4.21",
+    "parcel": "^2.16.4",
+    "parcel-transformer-svelte-v4": "^1.2.3",
+    "postcss": "^8.5.33",
+    "svelte": "^4.2.20"
   },
-  "dependencies": {
-    "svelte": "4.2.20"
+  "alias": {
+    "routing": "./deps/routing",
+    "@deps/*": "/deps/$1",
+    "@comps/*": "/src/comps/$1",
+    "@utils/*": "/src/utils/$1",
+    "@stores/*": "/src/stores/$1",
+    "@optics/*": "/src/optics/$1",
+    "@styles/*": "/src/optics/styles/$1"
   },
   "@parcel/resolver-default": {
     "packageExports": true
