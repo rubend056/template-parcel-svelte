@@ -1,27 +1,32 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
-	<!-- 
-		This makes sure the browser won't scale the page weirdly, 
-		i got it from the intro of web.dev's tutorial on responsive web design 
+	<!--
+		This makes sure the browser won't scale the page weirdly,
+		i got it from the intro of web.dev's tutorial on responsive web design
 		https://web.dev/learn/design/intro/
-		Which I still have to finish reading :| 
+		Which I still have to finish reading :|
 	-->
 	<meta name="viewport"
 		content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no;user-scalable=0;" />
 
-	<!-- 
-		Something slightly better than the default style the browser provides 
+	<title>Svelte + Parcel</title>
+
+	<!--
+		Something slightly better than the default style the browser provides
 		Made by kognise here: https://watercss.kognise.dev/
-		This one provides automatic theme selection based on browser settings, 
+		This one provides automatic theme selection based on browser settings,
 		but he has other stylesheets that force black/white only :)
+
+		The `npm:` in front means "resolve this through package.json's alias
+		block", the same spelling the sibling project uses — see README.
 	-->
-	<link rel="stylesheet" href="./water.css">
+	<link rel="stylesheet" href="npm:@styles/water.css">
 
 	<!-- Our style -->
-	<link rel="stylesheet" href="./index.scss">
+	<link rel="stylesheet" href="npm:@styles/index.scss">
 </head>
 
 <body>
@@ -29,7 +34,8 @@
 	<div id="app"></div>
 
 	<!-- Main script, the entrypoint to our webapp -->
-	<script type="module" src="index.js"></script>
+	<script type="module" src="./index.js"></script>
+
 </body>
 
 </html>

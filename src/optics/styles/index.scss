@@ -1,0 +1,40 @@
+// Everything this app adds on top of water.css.
+//
+// water.css (kognise) is the base: it styles the bare tags and opens a set of
+// custom properties in `:root` — `--background-alt`, `--text-main`, `--border`,
+// `--links` — which is what the rest of this file and the components' scoped
+// styles paint with. Leave it alone; override here instead.
+//
+// Sass is here for the nesting and the variables, not for a framework. Postcss
+// runs after it (see `.postcssrc`), which is where autoprefixer sees this file.
+
+$gap: 1.25rem;
+
+#app {
+	/* water.css already gives the body a max-width; the app inherits it */
+	padding-block: 0 3rem;
+}
+
+h1 {
+	margin-block-end: 0.25em;
+}
+
+.muted {
+	color: var(--text-main);
+	opacity: 0.7;
+	font-size: 0.9em;
+}
+
+code {
+	font-size: 0.95em;
+}
+
+// A link you are on should not look like a link (the router sets the attribute)
+a[aria-current="page"] {
+	text-decoration: none;
+}
+
+main {
+	// the gutter between route content and the footer that isn't there yet
+	padding-block-end: $gap;
+}
